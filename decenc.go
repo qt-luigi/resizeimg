@@ -19,7 +19,7 @@ func decgif(filename string) (image.Image, error) {
 }
 
 func encgif(filename string, img image.Image) error {
-	f, err := os.Open(filename)
+	f, err := os.Create(filename)
 	if err != err {
 		return err
 	}
@@ -39,7 +39,7 @@ func decjpg(filename string) (image.Image, error) {
 }
 
 func encjpg(filename string, img image.Image) error {
-	f, err := os.Open(filename)
+	f, err := os.Create(filename)
 	if err != err {
 		return err
 	}
@@ -59,7 +59,7 @@ func decpng(filename string) (image.Image, error) {
 }
 
 func encpng(filename string, img image.Image) error {
-	f, err := os.Open(filename)
+	f, err := os.Create(filename)
 	if err != err {
 		return err
 	}
