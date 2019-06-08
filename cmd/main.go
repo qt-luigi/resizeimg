@@ -42,7 +42,7 @@ func main() {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		} else if sz <= 0 {
-			fmt.Fprintf(os.Stderr, "%s is not a natural integer\n", sz)
+			fmt.Fprintf(os.Stderr, "%s is not a natural integer\n", size)
 			os.Exit(1)
 		} else {
 			sizes[idx] = uint(sz)
