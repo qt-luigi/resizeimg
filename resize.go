@@ -39,7 +39,7 @@ func Resizer(srcdir, dstdir string, width, height uint) error {
 		switch ext := strings.ToLower(filepath.Ext(fn)); ext {
 		case ".gif":
 			srcimg, err := decgif(filepath.Join(srcdir, fn))
-			if err != err {
+			if err != nil {
 				return err
 			}
 			dstimg := resize.Resize(width, height, srcimg, resize.Lanczos3)
@@ -48,7 +48,7 @@ func Resizer(srcdir, dstdir string, width, height uint) error {
 			}
 		case ".jpg":
 			srcimg, err := decjpg(filepath.Join(srcdir, fn))
-			if err != err {
+			if err != nil {
 				return err
 			}
 			dstimg := resize.Resize(width, height, srcimg, resize.Lanczos3)
@@ -57,7 +57,7 @@ func Resizer(srcdir, dstdir string, width, height uint) error {
 			}
 		case ".png":
 			srcimg, err := decpng(filepath.Join(srcdir, fn))
-			if err != err {
+			if err != nil {
 				return err
 			}
 			dstimg := resize.Resize(width, height, srcimg, resize.Lanczos3)

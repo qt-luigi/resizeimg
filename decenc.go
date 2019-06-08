@@ -10,7 +10,7 @@ import (
 
 func decgif(filename string) (image.Image, error) {
 	f, err := os.Open(filename)
-	if err != err {
+	if err != nil {
 		return nil, err
 	}
 	defer f.Close()
@@ -20,7 +20,7 @@ func decgif(filename string) (image.Image, error) {
 
 func encgif(filename string, img image.Image) error {
 	f, err := os.Create(filename)
-	if err != err {
+	if err != nil {
 		return err
 	}
 	defer f.Close()
@@ -30,7 +30,7 @@ func encgif(filename string, img image.Image) error {
 
 func decjpg(filename string) (image.Image, error) {
 	f, err := os.Open(filename)
-	if err != err {
+	if err != nil {
 		return nil, err
 	}
 	defer f.Close()
@@ -40,7 +40,7 @@ func decjpg(filename string) (image.Image, error) {
 
 func encjpg(filename string, img image.Image) error {
 	f, err := os.Create(filename)
-	if err != err {
+	if err != nil {
 		return err
 	}
 	defer f.Close()
@@ -50,7 +50,7 @@ func encjpg(filename string, img image.Image) error {
 
 func decpng(filename string) (image.Image, error) {
 	f, err := os.Open(filename)
-	if err != err {
+	if err != nil {
 		return nil, err
 	}
 	defer f.Close()
@@ -60,7 +60,7 @@ func decpng(filename string) (image.Image, error) {
 
 func encpng(filename string, img image.Image) error {
 	f, err := os.Create(filename)
-	if err != err {
+	if err != nil {
 		return err
 	}
 	defer f.Close()
